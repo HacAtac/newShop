@@ -22,11 +22,6 @@ const ProductScreen = ({ history, match }) => {
     history.push(`/cart/${match.params.id}?qty=${qty}`)
   }
 
-  // const addToCartHandler = () => {
-  //   dispatch(addToCart(product._id, qty))
-  //   props.history.push('/cart')
-  // }
-
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
