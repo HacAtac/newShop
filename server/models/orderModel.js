@@ -4,8 +4,8 @@ const orderSchema = mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
       required: true,
+      ref: 'User',
     },
     orderItems: [
       {
@@ -15,8 +15,8 @@ const orderSchema = mongoose.Schema(
         price: { type: Number, required: true },
         product: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: 'Product',
           required: true,
+          ref: 'Product',
         },
       },
     ],
@@ -31,10 +31,10 @@ const orderSchema = mongoose.Schema(
       required: true,
     },
     paymentResult: {
-      id: { type: String, required: true },
-      status: { type: String, required: true },
-      update_time: { type: String, required: true },
-      email: { type: String, required: true },
+      id: { type: String },
+      status: { type: String },
+      update_time: { type: String },
+      email_address: { type: String },
     },
     taxPrice: {
       type: Number,
@@ -51,7 +51,7 @@ const orderSchema = mongoose.Schema(
       required: true,
       default: 0.0,
     },
-    isPayed: {
+    isPaid: {
       type: Boolean,
       required: true,
       default: false,
