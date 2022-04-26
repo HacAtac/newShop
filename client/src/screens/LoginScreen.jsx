@@ -16,7 +16,8 @@ const LoginScreen = ({ location, history }) => {
   const userLogin = useSelector((state) => state.userLogin)
   const { loading, error, userInfo } = userLogin
 
-  const redirect = location.search ? location.search.split('=')[1] : '/'
+//this line basically says if the user is logged in, then redirect them to the home page and 
+  const redirect = location.search ? location.search.split('=')[1] : '/' 
 
   useEffect(() => {
     if (userInfo) {
