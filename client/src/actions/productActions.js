@@ -6,8 +6,8 @@ import {
   PRODUCT_DETAILS_REQUEST,
   PRODUCT_DETAILS_SUCCESS,
   PRODUCT_DETAILS_FAIL,
-  PRODUCT_DELETE_REQUEST,
   PRODUCT_DELETE_SUCCESS,
+  PRODUCT_DELETE_REQUEST,
   PRODUCT_DELETE_FAIL,
   PRODUCT_CREATE_REQUEST,
   PRODUCT_CREATE_SUCCESS,
@@ -64,9 +64,11 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
     dispatch({
       type: PRODUCT_DELETE_REQUEST,
     })
+
     const {
       userLogin: { userInfo },
     } = getState()
+
     const config = {
       headers: {
         Authorization: `Bearer ${userInfo.token}`,
@@ -88,7 +90,6 @@ export const deleteProduct = (id) => async (dispatch, getState) => {
     })
   }
 }
-
 
 export const createProduct = () => async (dispatch, getState) => {
   try {
@@ -140,7 +141,11 @@ export const updateProduct = (product) => async (dispatch, getState) => {
       },
     }
 
-    const { data } = await axios.put(`/api/products/${product._id}`, product, config)
+    const { data } = await axios.put(
+      `/api/products/${product._id}`,
+      product,
+      config
+    )
 
     dispatch({
       type: PRODUCT_UPDATE_SUCCESS,
