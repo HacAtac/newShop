@@ -12,7 +12,7 @@ import {
 } from '../controllers/productController.js'
 
 router.route('/').get(getProducts).post(protect, admin, createProduct)
-router.route('/:id/reviews').put(protect, createProductReview)
+router.route('/:id/reviews').post(protect, createProductReview)
 router
   .route('/:id')
   .get(getProductById)
