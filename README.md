@@ -14,23 +14,22 @@
 
 ## Language && Tools
 
-JavaScript </br>
-React </br>
-Redux </br>
-React Router </br>
+JavaScript For Frontend/Backend</br>
+React for Frontend UI</br>
+Redux for State Management</br>
+React Router for different pages </br>
 Bootstrap styled components </br>
-Very little raw CSS </br>
-MongoDB with Moongoose ODM </br>
-Experess </br>
-Node </br>
-JWT </br>
-AXIOS </br>
-ASYNC </br>
-MVC Structure </br>
+Raw CSS with Bootstrap also</br>
+MongoDB with Moongoose ODM  for DB and queires</br>
+Experess for api</br>
+Node for backend</br>
+JWT for Auth</br>
+AXIOS for frontend api calls</br>
+ASYNC Rest enpoints </br>
 Pagination </br>
-Carousel </br>
 Admin Panels with CRUD </br>
 Shopping cart </br>
+Order history && status </br>
 PayPal </br>
 
 ## Contributing
